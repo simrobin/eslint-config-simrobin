@@ -32,7 +32,9 @@
         - name: Lint app files
           run: npm run lint
 
-        - name: Publish package
-          if: github.ref == 'refs/heads/master'
-          run : bash script/deploy timekeeper "@docker-compose.yml"
+        - name: Release
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          run: npx semantic-release@17
 
