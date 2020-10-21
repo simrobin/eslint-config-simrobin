@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   parser: 'babel-eslint',
-  plugins: ['prettier'],
+  plugins: ['prettier', 'simple-import-sort'],
   parserOptions: {
     ecmaVersion: 2020,
   },
@@ -12,6 +12,27 @@ module.exports = {
     jest: true,
   },
   rules: {
+    'simple-import-sort/sort': [
+      'error',
+      {
+        groups: [
+          // Side effect imports
+          ['^\\u0000'],
+          // Node.js builtins.
+          [`^(${require('module').builtinModules.join('|')})(/|$)`],
+          // Packages. `react` related packages come first.
+          ['^react$', '^@?\\w'],
+          // Internal imports. This package doesn't manage absolute imports for now
+          ['^(app|components|containers|enums|constants|helpers|services|types|setupTests)(/.*|$)'],
+          // Parent imports. Put `..` last.
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          // Style imports.
+          ['^.+\\.s?css$'],
+        ],
+      },
+    ],
     'prettier/prettier': [
       'error',
       {
