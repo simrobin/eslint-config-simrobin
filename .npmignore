@@ -1,0 +1,6 @@
+*
+!.eslintrc.js
+!README.md
+!index.js
+!package-lock.json
+!package.json
