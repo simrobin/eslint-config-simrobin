@@ -24,6 +24,10 @@
     "lint:fix": "eslint --fix .",
     "lint:file": "eslint --fix"
   },
+  "peerDependencies": {
+    "eslint": "7.11.0",
+    "prettier": "2.1.2"
+  },
   "devDependencies": {
     "babel-eslint": "10.1.0",
     "eslint": "7.11.0",
