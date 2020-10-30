@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-simrobin",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "ESLint and Prettier config for simrobin",
   "keywords": [
     "javascript",
@@ -19,7 +19,6 @@
   "author": "Simon Robin",
   "license": "MIT",
   "scripts": {
-    "install": "./script/install_hooks",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:file": "eslint --fix"
@@ -28,7 +27,7 @@
     "eslint": "7.11.0",
     "prettier": "2.1.2"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-eslint": "10.1.0",
     "eslint": "7.11.0",
     "eslint-config-prettier": "6.13.0",
