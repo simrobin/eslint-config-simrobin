@@ -19,7 +19,6 @@
   "author": "Simon Robin",
   "license": "MIT",
   "scripts": {
-    "install": "./script/install_hooks",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:file": "eslint --fix"
