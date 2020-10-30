@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-simrobin",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "ESLint and Prettier config for simrobin",
   "keywords": [
     "javascript",
