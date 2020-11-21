@@ -13,7 +13,7 @@ module.exports = {
     jest: true,
   },
   rules: {
-    'simple-import-sort/sort': [
+    'simple-import-sort/imports': [
       'error',
       {
         groups: [
