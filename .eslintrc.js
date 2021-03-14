@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended', 'prettier'],
   parser: 'babel-eslint',
   plugins: ['prettier', 'simple-import-sort'],
   parserOptions: {
