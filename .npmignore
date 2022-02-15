@@ -1,5 +1,6 @@
 *
 !.eslintrc.js
+!typescript.js
 !README.md
 !index.js
 !package-lock.json
