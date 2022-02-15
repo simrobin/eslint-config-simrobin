@@ -1,9 +1,9 @@
 module.exports = {
   extends: ['eslint:recommended', 'prettier'],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   plugins: ['prettier', 'simple-import-sort'],
   parserOptions: {
-    ecmaVersion: 2020,
+    requireConfigFile: false,
   },
   env: {
     browser: true,
