@@ -5,7 +5,7 @@
   on: [push]
 
   env:
-    NODE_VERSION: '14.x'
+    NODE_VERSION: '16.x'
 
   jobs:
     continuous_integration:
@@ -33,9 +33,9 @@
           run: npm run lint
 
         - name: Release
-          if: github.ref == 'refs/heads/master'
+          if: github.ref == 'refs/heads/main'
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          run: npx semantic-release@17
+          run: npx semantic-release@18
 
